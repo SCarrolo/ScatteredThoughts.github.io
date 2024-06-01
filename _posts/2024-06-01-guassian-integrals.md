@@ -12,8 +12,19 @@ This is a note I always keep with me because there are not many integrals that I
 
 ## 1 dimension
 
+Let's warm-up by deriving the usual 1-dimensional gaussian integral, 
 \begin{equation}
-  f(x) = \int_0^\infty e^{-x^2/2}
+  I_1(a) = \int_{-\infty}^\infty  e^{-ax^2} dx \, , 
+\end{equation}
+by instead calculating a, much harder, 2-dimensional version, 
+\begin{equation}
+  I_1(a)^2 = \int_{-\infty}^\infty \int_{-\infty}^\infty e^{-a (x^2 + y^2)} dx dy = \int_0^\infty \int_0^{2 \pi} e^{-a r^2} r d\theta dr = 2\pi \int_0^\infty \frac{d}{dr} \left(\frac{e^{-ar^2}}{2a}\right) dr = \frac{\pi}{a} \, .
+\end{equation}
+
+Thus, we now know
+
+\begin{equation}
+	I_1 = \sqrt{\frac{\pi}{a}}
 \end{equation}
 
 Here's a table:
