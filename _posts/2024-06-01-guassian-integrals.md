@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Guassian Integrals
+title: Gaussian Integrals
 subtitle: Note to self
 tags: [Math]
 comments: true
@@ -25,6 +25,14 @@ Thus, we now know
 
 \begin{equation}
 	I_1 = \sqrt{\frac{\pi}{a}}
+\end{equation}
+
+### Still 1D but even more tedious
+
+Sometimes, we (and by we I mean "I") are not smart enough while parameterising the problem, and end up with a unfriendlier gaussian-cousin,
+
+\begin{equation}
+	I_1(a,b,c) = \int_{-\infty}^{\infty} e^{s}
 \end{equation}
 
 Here's a table:
