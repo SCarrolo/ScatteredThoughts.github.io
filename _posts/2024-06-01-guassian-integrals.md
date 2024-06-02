@@ -29,7 +29,7 @@ Thus, we now know
 
 ## Still 1D but even more tedious
 
-Sometimes, we (and by we, I mean "I") are not smart enough while parameterizing the problem, and end up with a unfriendlier gaussian-cousin,
+Take a gaussian-like with a general quadratic exponent,
 
 $$\begin{equation}
 	I_1(a,b,c) = \int_{-\infty}^{\infty} e^{-(ax^2+bx+c)}  dx\, .
@@ -69,7 +69,7 @@ $$\begin{equation}
 	A_{ij} x_i x_j = \frac{1}{2}( \underbrace{A_{ij} + A_{ji}}_ { 2 A_{(ij)} } + \underbrace{A_{ij} - A_{ji}}_ {2A_{ [ij] }})x_i x_j = A_{(ij)}x_i x_j + 0 \, ,
 \end{equation}$$
 
-then, if $A_(ij)$ is non-singular, then it is diagonalizable using orthogonal matrices, which means 
+then, if $A_ {(ij)}$ is non-singular, then it is diagonalizable using orthogonal matrices, which means 
 
 $$\begin{equation}
 	\delta_ {ij}\lambda_ i = (U^T)_ {ik} A_ {(kl)} U_ {lj} \, ,
