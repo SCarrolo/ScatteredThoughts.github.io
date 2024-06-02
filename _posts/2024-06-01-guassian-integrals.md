@@ -5,7 +5,6 @@ subtitle: Note to self
 tags: [Math]
 comments: true
 mathjax: true
-full-width: true
 author: Sérgio Carrôlo
 ---
 
