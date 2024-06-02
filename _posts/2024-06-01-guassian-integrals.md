@@ -64,9 +64,9 @@ Start by noticing that
 $\underbrace{a}_{b}$
 
 
-\begin{equation}
-	A_{ij} x_i x_j = \frac{1}{2}( \underbrace{A_{ij} + A_{ji}}_{ 2 A_{(ij)} } + \underbrace{A_{ij} - A_{ji}}_{2A_{[ij]}})x_i x_j = A_{(ij)}x_i x_j + 0 \, ,
-\end{equation}
+$$\begin{equation}
+	A_{ij} x_i x_j = \frac{1}{2}( \underbrace{A_{ij} + A_{ji}}_{ 2 A_{(ij)} } + \underbrace{A_{ij} - A_{ji}}_{2A_{ [ ij ] }})x_i x_j = A_{(ij)}x_i x_j + 0 \, ,
+\end{equation}$$
 
 then, if $A_(ij)$ is non-singular, then it is diagonalizable using orthogonal matrices, which means 
 \begin{equation}
