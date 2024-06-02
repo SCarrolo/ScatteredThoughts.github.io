@@ -60,23 +60,21 @@ A natural generalization of the 1D gaussian integral above to n dimensions is
 
 where $A$ is a $n\times n$ matrix. Calculating this one just amounts to reducing it to a bunch (actually n) of separated gaussian integrals - because this is the only one we know how to do. 
 
-Start by noticing that
-$\underbrace{a}_{b}$
 
 
 $$\begin{equation}
-	A_{ij} x_i x_j = \frac{1}{2}( \underbrace{A_{ij} + A_{ji}}_{ 2 A_{(ij)} } + \underbrace{A_{ij} - A_{ji}}_{2A_{ [ ij ] }})x_i x_j = A_{(ij)}x_i x_j + 0 \, ,
+	A_{ij} x_i x_j = \frac{1}{2}( \underbrace{A_{ij} + A_{ji}}_ { 2 A_{(ij)} } + \underbrace{A_{ij} - A_{ji}}_ {2A_{ [ij] }})x_i x_j = A_{(ij)}x_i x_j + 0 \, ,
 \end{equation}$$
 
 then, if $A_(ij)$ is non-singular, then it is diagonalizable using orthogonal matrices, which means 
 \begin{equation}
-	\delta_{ij}\lambda_i = (U^T)_{ik} A_{(kl)} U_{lj} \, ,
+	\delta_{ij}\lambda_i = (U^T)_ {ik} A_{(kl)} U_{lj} \, ,
 \end{equation}
 
 where $U$ is such that $U^T U = \mathbb{1}$. Note that, on the LHS, there is no sum implied over repeated indices, while on the RHS there is a sum over $k$ and $l$. Plugging this back into the equation above we get
 
 \begin{equation}
-	A_{(ij)}x_i x_j = x_i U_{ik} \delta_{kl} \underbrace{(U^T)_{lj} x_j}_{y_l} \lambda_{k} = y_k^2 \lambda_k \, ,
+	A_{(ij)}x_i x_j = x_i U_{ik} \delta_{kl} \underbrace{(U^T)_{lj} x_ j}_ {y_l} \lambda_{k} = y_k^2 \lambda_k \, ,
 \end{equation}
 
 which is the desired gaussian exponent. Now, just recall that doing a linear change of variables in a multiple integral introduces a determinant factor of the matrix that does the transformation,
@@ -100,7 +98,7 @@ where now we assume that $A$ is symmetric, if not, just take the symmetric part 
 To compute this awful integral, complete the square to turn it into a beautiful n-dimensional gaussian integral, 
 
 \begin{equation}
-	x^T A x +  x^T b + c = x^T A(x + A^{-1}b) +c = (x+ A^{-1}b)^T A\underbrace{(x + A^{-1}b)}_{y} - b^T \underbrace{(A^{-1})^T}_{A^T = A} A A^{-1}b +c = y^T A y - b^T A^{-1} b +c
+	x^T A x +  x^T b + c = x^T A(x + A^{-1}b) +c = (x+ A^{-1}b)^T A\underbrace{(x + A^{-1}b)}_ {y} - b^T \underbrace{(A^{-1})^T}_{A^T = A} A A^{-1}b +c = y^T A y - b^T A^{-1} b +c
 \end{equation}
 
 with this change of variables, the integral reduces to
