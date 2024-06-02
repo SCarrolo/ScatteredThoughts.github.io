@@ -31,20 +31,23 @@ Thus, we now know
 
 Sometimes, we (and by we, I mean "I") are not smart enough while parameterizing the problem, and end up with a unfriendlier gaussian-cousin,
 
-\begin{equation}
+$$\begin{equation}
 	I_1(a,b,c) = \int_{-\infty}^{\infty} e^{-(ax^2+bx+c)}  dx\, .
-\end{equation}
+\end{equation}$$
 
 The trick here is what people call "complete the square". This is just because that's basically the only integral I know how to do, therefore I want to turn this awful one into a friendly one.
 
 Completing the square means
-\begin{equation}
+
+$$\begin{equation}
 	ax^2 + bx +c = a\left( x^2 + \frac{b}{a}x\right) + c = a\left( x + \frac{b}{2a}\right)^2 - \frac{ b^2}{4a} + c \, ,
-\end{equation}
+\end{equation}$$
+
 which implies
-\begin{equation}
-	I_1(a,b,c) = \int_{-\infty}^{\infty} e^{-(ax^2+bx+c)} dx = e^{\frac{ b^2}{4a} - c}\int_{-\infty}^{\infty} e^{-a\left( x + \frac{b}{2a}\right)^2} dx = e^{\frac{ b^2}{4a} - c} \sqrt{\frac{\pi}{a}}
-\end{equation}
+
+$$\begin{equation}
+	I_ 1(a,b,c) = \int_ {-\infty}^{\infty} e^{-(ax^2+bx+c)} dx = e^{\frac{ b^2}{4a} - c}\int_ {-\infty}^{\infty} e^{-a\left( x + \frac{b}{2a}\right)^2} dx = e^{\frac{ b^2}{4a} - c} \sqrt{\frac{\pi}{a}}
+\end{equation}$$
 
 In the last equality, we used the fact that shifting $\pm \infty$ by $-\frac{b}{2a}$ is still $\pm \infty$.
 
@@ -54,9 +57,9 @@ In the last equality, we used the fact that shifting $\pm \infty$ by $-\frac{b}{
 
 A natural generalization of the 1D gaussian integral above to n dimensions is 
 
-\begin{equation}
-	I_n(A_{ij}) = \int_{-\infty}^\infty e^{- x_iA_{ij}x_j} d^nx \, , 
-\end{equation}
+$$\begin{equation}
+	I_ n(A_ {ij}) = \int_ {-\infty}^\infty e^{- x_ i A_ {ij}x_ j} d^n x \, , 
+\end{equation}$$
 
 where $A$ is a $n\times n$ matrix. Calculating this one just amounts to reducing it to a bunch (actually n) of separated gaussian integrals - because this is the only one we know how to do. 
 
@@ -75,7 +78,7 @@ $$\begin{equation}
 where $U$ is such that $U^T U = \mathbb{1}$. Note that, on the LHS, there is no sum implied over repeated indices, while on the RHS there is a sum over $k$ and $l$. Plugging this back into the equation above we get
 
 $$\begin{equation}
-	A_{(ij)}x_i x_j = x_i U_{ik} \delta_{kl} \underbrace{(U^T)_ {lj} x_ j}_ {y_l} \lambda_{k} = y_k^2 \lambda_k \, ,
+	A_{(ij)}x_i x_j = x_i U_{ik} \delta_{kl} \underbrace{(U^T)_ {lj} x_ j}_ {y_l} \lambda_ {k} = y_ k^2 \lambda_ k \, ,
 \end{equation}$$
 
 which is the desired gaussian exponent. Now, just recall that doing a linear change of variables in a multiple integral introduces a determinant factor of the matrix that does the transformation,
@@ -98,9 +101,10 @@ $$\begin{equation}
 where now we assume that $A$ is symmetric, if not, just take the symmetric part of the matrix you have.
 To compute this awful integral, complete the square to turn it into a beautiful n-dimensional gaussian integral, 
 
-$$\begin{equation}
-	x^T A x +  x^T b + c = x^T A(x + A^{-1}b) +c = (x+ A^{-1}b)^T A\underbrace{(x + A^{-1}b)}_ {y} - b^T \underbrace{(A^{-1})^T}_{A^T = A} A A^{-1}b +c = y^T A y - b^T A^{-1} b +c
-\end{equation}$$
+$$\begin{align}
+	x^T A x +  x^T b + c &= x^T A(x + A^{-1}b) +c = (x+ A^{-1}b)^T A\underbrace{(x + A^{-1}b)}_ {y} - b^T \underbrace{(A^{-1})^T}_{A^T = A} A A^{-1}b +c \\
+ &= y^T A y - b^T A^{-1} b +c
+\end{align}$$
 
 with this change of variables, the integral reduces to
 
