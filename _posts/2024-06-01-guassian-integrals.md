@@ -79,11 +79,11 @@ where $U$ is such that $U^T U = \mathbb{1}$. Note that, on the LHS, there is no 
 
 which is the desired gaussian exponent. Now, just recall that doing a linear change of variables in a multiple integral introduces a determinant factor of the matrix that does the transformation,
 
-\begin{align}
+$$\begin{align}
 	I_n(A_{ij}) &= \int_{\mathbb{R}^n} e^{- x_iA_{ij}x_j} d^nx = \int_{\mathbb{R}^n}e^{- y_i^2 \lambda_i} \left|\frac{1}{\det(U)}\right|d^ny \\
 	&\text{Use} \quad U^TU = \mathbb{1} \Rightarrow (\det{U})^1 = 1 \Rightarrow |\det{U}| = 1 \\
 	&= \int_{\mathbb{R}^n} \prod_{i=1}^n (e^{- y_i^2 \lambda_i}dy_i) = \prod_{i=1}^n\sqrt{\frac{\pi}{\lambda_i}} = \sqrt{\frac{\pi^n}{\det(A_{(ij)})}}
-\end{align}
+\end{align}$$
 
 
 ## Completing squares is still boring
