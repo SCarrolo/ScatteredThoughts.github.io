@@ -61,9 +61,11 @@ A natural generalization of the 1D gaussian integral above to n dimensions is
 where $A$ is a $n\times n$ matrix. Calculating this one just amounts to reducing it to a bunch (actually n) of separated gaussian integrals - because this is the only one we know how to do. 
 
 Start by noticing that
+$\underbrace{a}_{b}$
+
 
 \begin{equation}
-	A_{ij} x_i x_j = \frac{1}{2}( \underbrace{A_{ij} + A_{ji}}_{2A_{(ij)}} + \underbrace{A_{ij} - A_{ji}}_{2A_{[ij]}})x_i x_j = A_{(ij)}x_i x_j + 0 \, ,
+	A_{ij} x_i x_j = \frac{1}{2}( \underbrace{A_{ij} + A_{ji}}_{ 2 A_{(ij)} } + \underbrace{A_{ij} - A_{ji}}_{2A_{[ij]}})x_i x_j = A_{(ij)}x_i x_j + 0 \, ,
 \end{equation}
 
 then, if $A_(ij)$ is non-singular, then it is diagonalizable using orthogonal matrices, which means 
